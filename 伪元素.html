@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+
+        /*微元素表示页面中一些特殊的，并不真实存在的元素（特殊的位置）
+            微元素使用：：开头
+                ：：first-letter 表示第一个字母
+                ：：first-line  表示第一行
+                ：：selection 通过鼠标表示选中的内容
+                ：：before 元素的开始位置
+                ：：after 元素的最后
+                    使用before和after必须结合content属性来使用
+        */
+
+        p::first-letter{
+            font-size: 50px;
+        }
+        p::first-line{
+            background-color: aqua;
+        }
+        p::selection{
+            background: black;
+        }
+        div::before{
+            content: 'abc';
+            color: red;
+        }
+        div::after{
+            content: 'haha';
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <q>48515</q>
+<p>今天开心吗</p>
+<div>hello</div>
+</body>
+</html>
